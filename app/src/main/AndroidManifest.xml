@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="binar.greta.pert6_tugas">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".data.NewsApplication"
@@ -13,9 +14,19 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Pert6_Tugas"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.Pert6_Tugas" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:label="@string/title_activity_register"
+            android:theme="@style/Theme.Pert6_Tugas" />
         <activity
             android:name=".view.DetailActivity"
             android:exported="false"
@@ -25,7 +36,7 @@
             android:name=".view.HomeActivity"
             android:exported="true"
             android:label="@string/title_activity_home"
-            android:theme="@style/Theme.Pert6_Tugas" >
+            android:theme="@style/Theme.Pert6_Tugas">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,9 +48,7 @@
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Pert6_Tugas"
-            tools:ignore="RedundantLabel">
-
-        </activity>
+            tools:ignore="RedundantLabel" />
     </application>
 
 </manifest>
